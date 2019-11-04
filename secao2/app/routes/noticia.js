@@ -1,13 +1,11 @@
 // const dbConection = require("../../config/dbConection");
 
-module.exports = function(app) {
-  app.get("/noticia", function(req, res) {
-    const conn = app.config.dbConection();
+module.exports = function(aplication) {
+  aplication.get("/noticia", function(req, res) {
+    const conn = aplication.config.dbConection();
+    const noticiasModel = aplication.app.models.noticiasModel;
 
-    conn.query("SELECT * FROM noticias where id_noticia = 2", function(
-      error,
-      result
-    ) {
+    noticiasModel.getNoticia(conn, function(error, result) {
       res.render("noticias/noticia", { noticia: result });
     });
   });
