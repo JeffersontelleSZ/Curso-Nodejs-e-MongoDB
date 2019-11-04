@@ -29,3 +29,11 @@ Um gerenciador de pacotes javascript
 \*\*\* Instalação dos pacotes
 
 - npm init / npm install
+
+<!-- Consign -->
+
+Um autoload para o carregamento de scripts
+
+\*\*\* Instalação do Consign
+
+- npm install consign
