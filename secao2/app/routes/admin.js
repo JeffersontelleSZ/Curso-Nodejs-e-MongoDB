@@ -8,14 +8,10 @@ module.exports = function(aplication) {
 
     // Conexao
     const conn = aplication.config.dbConection();
-    const noticiasModel = aplication.app.models.noticiasModel;
+    const noticiasModel = new aplication.app.models.noticiasModel(conn);
 
-    noticiasModel.salvarNoticia(noticia, conn, function(error, result) {
+    noticiasModel.salvarNoticia(noticia, function(error, result) {
       res.redirect("/noticias");
     });
-
-    // Model
-
-    // Save
   });
 };
