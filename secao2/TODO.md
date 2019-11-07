@@ -37,3 +37,5 @@ Um autoload para o carregamento de scripts
 \*\*\* Instalação do Consign
 
 - npm install consign
+
+<!-- Express Validator -->
