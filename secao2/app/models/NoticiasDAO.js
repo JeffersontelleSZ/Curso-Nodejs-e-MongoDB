@@ -11,7 +11,6 @@ NoticiasDAO.prototype.getNoticia = function(callback) {
 };
 
 NoticiasDAO.prototype.salvarNoticia = function(noticia, callback) {
-  console.log(noticia);
   this._conn.query("insert into noticias set ?", noticia, callback);
 };
 

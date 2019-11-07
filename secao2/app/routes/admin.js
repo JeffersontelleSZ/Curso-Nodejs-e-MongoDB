@@ -5,7 +5,6 @@ module.exports = function(aplication) {
 
   aplication.post("/noticias/salvar", function(req, res) {
     const noticia = req.body;
-    console.log(noticia);
 
     // Validar Formulario
     req.assert("titulo", "Titulo é obrigatorio").notEmpty();
@@ -21,8 +20,10 @@ module.exports = function(aplication) {
     req.assert("noticia", "Noticia é obrigatorio").notEmpty();
 
     const errors = req.validationErrors();
+
+    console.log(errors);
     if (errors) {
-      res.render("admin/form_add_noticia");
+      res.render("admin/form_add_noticia", { validacao: errors });
       return;
     }
 
