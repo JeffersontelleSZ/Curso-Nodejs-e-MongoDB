@@ -24,6 +24,7 @@
         type="text"
         id="titulo"
         name="titulo"
+        value="<%= noticia.titulo %>"
         placeholder="Titulo da Noticia"
       />
       <br />
@@ -33,6 +34,7 @@
         type="text"
         id="resumo"
         name="resumo"
+        value="<%= noticia.resumo %>"
         placeholder="Resumo da Noticia"
       />
       <br />
@@ -42,6 +44,7 @@
         type="text"
         id="autor"
         name="autor"
+        value="<%= noticia.autor %>"
         placeholder="Autor da Noticia"
       />
       <br />
@@ -51,13 +54,20 @@
         type="date"
         id="data_noticia"
         name="data_noticia"
+        value="<%= noticia.data_noticia %>"
         placeholder="Data da Noticia"
       />
       <br />
 
       <br />
       <label for="">Noticia</label>
-      <textarea name="noticia" id="noticia" cols="30" rows="5"></textarea>
+      <textarea
+        name="noticia"
+        id="noticia"
+        value="<%= noticia.noticia %>"
+        cols="30"
+        rows="5"
+      ></textarea>
 
       <br />
 
