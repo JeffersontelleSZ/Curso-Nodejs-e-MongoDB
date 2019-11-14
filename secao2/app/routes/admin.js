@@ -8,6 +8,6 @@ module.exports = function(aplication) {
   });
 
   aplication.post("/noticias/salvar", function(req, res) {
-    aplication.app.controllers.admin.noticia_salvar(aplication, req, res);
+    aplication.app.controllers.admin.noticias_salvar(aplication, req, res);
   });
 };

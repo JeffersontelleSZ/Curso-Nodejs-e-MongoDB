@@ -2,7 +2,7 @@ module.exports.formulario_inclusao_noticia = function(aplication, req, res) {
   res.render("admin/form_add_noticia", { validacao: {}, noticia: {} });
 };
 
-module.exports.noticia_salvar = function(aplication, req, res) {
+module.exports.noticias_salvar = function(aplication, req, res) {
   const noticia = req.body;
 
   // Validar Formulario
